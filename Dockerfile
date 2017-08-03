@@ -4,7 +4,7 @@ FROM alpine:latest
 MAINTAINER MoonChang Chae <mcchae@gmail.com>
 
 RUN apk add --update tzdata openssh bash netcat-openbsd \
-    util-linux dbus ttf-freefont xauth xf86-input-keyboard sudo \
+    	util-linux dbus ttf-freefont xauth xf86-input-keyboard sudo busybox-suid \
     && cp -f /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
     && echo "Asia/Seoul" > /etc/timezone \
     && mkdir -p ~root/.ssh && chmod 700 ~root/.ssh \
