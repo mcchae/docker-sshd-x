@@ -8,7 +8,7 @@
 This an alpine sshd container made for X forwarding.
 Start a local X-server. On mac you can use XQuartz.
 Ssh into the container and run your favorite alpine
-x-app (e.g. midori) and see it on your local machine.
+x-app (e.g. firefox) and see it on your local machine.
 
 and ...
 
@@ -61,7 +61,7 @@ For ssh key forwarding use ssh-agent
 ```bash
 ssh-agent
 ssh-add id_rsassh -A -p 4848 -X root@<dockerhost>
-ssh -C -A -t -X -p 4848  root@<dockerhost> ssh -C -A -t -X -p 777 root@<hop> midori
+ssh -C -A -t -X -p 4848  root@<dockerhost> ssh -C -A -t -X -p 777 root@<hop> firefox
 ```
 in the last example the each hop must have the same authorized_keys.
 
