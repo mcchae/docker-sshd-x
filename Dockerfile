@@ -13,6 +13,7 @@ RUN apk add --update tzdata openssh bash netcat-openbsd \
 RUN addgroup toor \
     && adduser  -G toor -s /bin/bash -D toor \
     && echo "toor:r" | /usr/sbin/chpasswd \
+    && echo "root:r" | /usr/sbin/chpasswd \
     && echo "toor    ALL=(ALL) ALL" >> /etc/sudoers
 
 ADD chroot/usr/local/bin/* /usr/local/bin
