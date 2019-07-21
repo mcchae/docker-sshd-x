@@ -1,5 +1,5 @@
-#FROM alpine:latest
-FROM alpine:3.4
+FROM alpine:latest
+#FROM alpine:3.8
 # FROM alpine:edge
 
 MAINTAINER MoonChang Chae <mcchae@gmail.com>
